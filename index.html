@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ⴰⵙⴳⴳⵯⴰⵙ ⴰⵎⴰⵢⵏⵓ 2976</title>
+    <style>
+        /* إعدادات الصفحة والألوان */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            background: linear-gradient(180deg, #0099CC 33%, #99CC33 33%, #99CC33 66%, #FFCC00 66%);
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 90%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .yaz-symbol {
+            font-size: 80px;
+            color: #CC0033; 
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        
+        .khallala-img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(2px 4px 6px black);
+        }
+
+        h1 {
+            color: #333;
+            margin: 10px 0;
+            font-size: 2.5rem;
+        }
+
+        .tifinagh {
+            font-family: "Noto Sans Tifinagh", sans-serif;
+            color: #0099CC;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #CC0033;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #a30029;
+        }
+
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+      
+        .pattern {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            opacity: 0.2;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pattern"></div>
+
+    <div class="container">
+        <div class="yaz-symbol">ⵣ</div>
+          <h1 class="tifinagh">ⴰⵙⴳⴳⵯⴰⵙ ⴰⵎⴰⵢⵏⵓ</h1>
+        <h1>Assegas Amaynu</h1>
+        
+
+        <img src="" alt="Tizerzai" class="khallala-img" onerror="this.style.display='none'">
+        <div class="yaz-symbol">2976</div>
+      
+        <h1 class="tifinagh">ⴰⵙⴳⴳⵯⴰⵙ ⴰⵎⴳⴳⴰⵣ</h1>
+        <h1>Assegas Amegas</h1>
+        <p>سنة أمازيغية سعيدة مليئة بالأفراح والمسرات
+            <br>
+            ⴰⵙⴳⴳⵯⴰⵙ ⴰⵎⴰⵢⵏⵓ, ⵜⴰⵣⵎⵔⵜ ⴷ ⵓⴼⵔⴰ
+        </p>
+
+        <a href="#" class="btn" onclick="celebrate()">IDAI-ⵉⴷⴰⵢ</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+       
+        window.onload = function() {
+            celebrate();
+        };
+
+        function celebrate() {
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                var particleCount = 50 * (timeLeft / duration);
+               
+                confetti(Object.assign({}, defaults, { 
+                    particleCount, 
+                    origin: { x: Math.random(), y: Math.random() - 0.2 },
+                    colors: ['#0099CC', '#99CC33', '#FFCC00', '#CC0033']
+                }));
+            }, 250);
+        }
+    </script>
+</body>
+</html>
